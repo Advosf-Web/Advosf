@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADVOSF - Advocacia do Senado Federal</title>
-    <script src="https://imgur.com/PoSVWQb"></script>
+    <img src="https://i.imgur.com/PoSVWQb.jpg" alt="Descrição da imagem">
     <script>
         tailwind.config = {
             theme: {
@@ -39,6 +39,32 @@
         }
     </style>
 </head>  
+        <script>
+    
+    function downloadTemplate(type) {
+        // Defina os links reais aqui
+        const links = {
+            Parecer: "https://drive.google.com/uc?export=download&id=1Yx-ot4yHjjWEoUZcnllU8VJ0rxHGHnDq",
+            Informação: "https://drive.google.com/uc?export=download&id=1x3XlgM4XxOFlGTnpOUv49LykkH3oPsH1",
+            Ofício: "https://drive.google.com/uc?export=download&id=1QyI8TPgvAUcZTLuz9etEMlNLkdCTluAR",
+            Despacho: "https://drive.google.com/uc?export=download&id=1V7L0vRUU1BuQP4VPlqHXvGsoiwstdsuo"
+            // você adiciona os outros aqui...
+        };
+
+        if (links[type]) {
+            window.location.href = links[type], "_blank"); // abre o link em nova aba
+            // OU use: window.open(links[type]; // força o download na mesma aba
+        } else {
+            alert("Arquivo não encontrado!");
+        }
+    }
+
+    // Função para baixar todos os modelos em .zip
+    function downloadAll() {
+        const linkZip = "https://drive.google.com/uc?export=download&id=1b3pqoWTiUvI3WJ4bCdHIETV9hRSS0_yK"; // link do pacote completo
+        window.open(linkZip, "_blank");
+    }
+    </script>
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
     <header class="bg-senate-blue text-white shadow-lg">
@@ -583,32 +609,6 @@
     </footer>
 
     <script>
-    
-    function downloadTemplate(type) {
-        // Defina os links reais aqui
-        const links = {
-            Parecer: "https://drive.google.com/uc?export=download&id=1Yx-ot4yHjjWEoUZcnllU8VJ0rxHGHnDq",
-            Informação: "https://drive.google.com/uc?export=download&id=1x3XlgM4XxOFlGTnpOUv49LykkH3oPsH1",
-            Ofício: "https://drive.google.com/uc?export=download&id=1QyI8TPgvAUcZTLuz9etEMlNLkdCTluAR",
-            Despacho: "https://drive.google.com/uc?export=download&id=1V7L0vRUU1BuQP4VPlqHXvGsoiwstdsuo"
-            // você adiciona os outros aqui...
-        };
-
-        if (links[type]) {
-            window.location.href = links[type], "_blank"); // abre o link em nova aba
-            // OU use: window.open(links[type]; // força o download na mesma aba
-        } else {
-            alert("Arquivo não encontrado!");
-        }
-    }
-
-    // Função para baixar todos os modelos em .zip
-    function downloadAll() {
-        const linkZip = "https://drive.google.com/uc?export=download&id=1b3pqoWTiUvI3WJ4bCdHIETV9hRSS0_yK"; // link do pacote completo
-        window.open(linkZip, "_blank");
-    }
-    </script>
-    <script>
         // Mobile menu toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -662,6 +662,7 @@
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97872fd003f2f1c3',t:'MTc1Njc1NTA3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
 
 
