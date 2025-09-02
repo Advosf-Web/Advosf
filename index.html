@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVOSF - Advocacia do Senado Federal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'senate-blue': '#1e3a8a',
+                        'senate-light-blue': '#3b82f6',
+                        'senate-dark-blue': '#1e40af'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .parallax-video {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-senate-blue text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-senate-blue font-bold text-xl">⚖️</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">ADVOSF</h1>
+                        <p class="text-blue-200 text-sm">Advocacia do Senado Federal</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-blue-200 transition-colors">Início</a>
+                    <a href="#templates" class="hover:text-blue-200 transition-colors">Modelos</a>
+                    <a href="#overview" class="hover:text-blue-200 transition-colors">Visão Geral</a>
+                    <a href="#tutorials" class="hover:text-blue-200 transition-colors">Tutoriais</a>
+                    <a href="#practices" class="hover:text-blue-200 transition-colors">Boas Práticas</a>
+                    <a href="#faq" class="hover:text-blue-200 transition-colors">FAQ</a>
+                </nav>
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-senate-dark-blue px-6 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-blue-200 transition-colors">Início</a>
+                <a href="#templates" class="hover:text-blue-200 transition-colors">Modelos</a>
+                <a href="#overview" class="hover:text-blue-200 transition-colors">Visão Geral</a>
+                <a href="#tutorials" class="hover:text-blue-200 transition-colors">Tutoriais</a>
+                <a href="#practices" class="hover:text-blue-200 transition-colors">Boas Práticas</a>
+                <a href="#faq" class="hover:text-blue-200 transition-colors">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative text-white py-20 overflow-hidden">
+        <!-- Video Background -->
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover parallax-video">
+            <source src="https://i.imgur.com/GKbuhUV.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-senate-blue bg-opacity-60"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+                Padronização a serviço da excelência jurídica
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed fade-in">
+                A Advocacia do Senado modernizou a elaboração de documentos jurídicos por meio de modelos padronizados (.dotx) no Microsoft Word. Essa iniciativa garante uniformidade, clareza, identidade institucional e mais eficiência no trabalho da equipe.
+            </p>
+            
+            <!-- Benefits Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-6xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-3">✅</div>
+                    <h3 class="font-semibold mb-2">Redução de erros</h3>
+                    <p class="text-sm text-blue-100">Formatação consistente e padronizada</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-3">💡</div>
+                    <h3 class="font-semibold mb-2">Clareza e objetividade</h3>
+                    <p class="text-sm text-blue-100">Comunicação mais eficiente</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-3">🎯</div>
+                    <h3 class="font-semibold mb-2">Identidade visual</h3>
+                    <p class="text-sm text-blue-100">Fortalecimento institucional</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h3 class="font-semibold mb-2">Ganho de agilidade</h3>
+                    <p class="text-sm text-blue-100">Produção mais rápida de minutas</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToSection('templates')" class="bg-white text-senate-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2">
+                    <span>📑</span>
+                    <span>Ver Modelos</span>
+                </button>
+                <button onclick="scrollToSection('tutorials')" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-senate-blue transition-colors flex items-center justify-center space-x-2">
+                    <span>📽️</span>
+                    <span>Assistir Tutorial</span>
+                </button>
+                <button onclick="downloadAll()" class="bg-senate-dark-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-900 transition-colors flex items-center justify-center space-x-2">
+                    <span>📥</span>
+                    <span>Baixar Todos os Templates</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section id="templates" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-senate-blue mb-4">Templates e Modelos</h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                Acesse nossos modelos padronizados para diferentes tipos de documentos jurídicos
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- Parecer -->
+                <div class="bg-gray-50 rounded-xl p-8 hover-lift border border-gray-200">
+                    <div class="text-4xl mb-4">📘</div>
+                    <h3 class="text-2xl font-bold text-senate-blue mb-4">Parecer</h3>
+                    <p class="text-gray-600 mb-6">Peça voltada à fundamentação técnica e jurídica com estrutura padronizada para análises complexas.</p>
+                    <button onclick="downloadTemplate('parecer')" class="w-full bg-senate-blue text-white py-3 rounded-lg hover:bg-senate-dark-blue transition-colors">
+                        Baixar Modelo (.dotx)
+                    </button>
+                </div>
+
+                <!-- Informação -->
+                <div class="bg-gray-50 rounded-xl p-8 hover-lift border border-gray-200">
+                    <div class="text-4xl mb-4">🗂️</div>
+                    <h3 class="text-2xl font-bold text-senate-blue mb-4">Informação</h3>
+                    <p class="text-gray-600 mb-6">Documento objetivo, usado para encaminhamentos formais e comunicações internas estruturadas.</p>
+                    <button onclick="downloadTemplate('informacao')" class="w-full bg-senate-blue text-white py-3 rounded-lg hover:bg-senate-dark-blue transition-colors">
+                        Baixar Modelo (.dotx)
+                    </button>
+                </div>
+
+                <!-- Ofício -->
+                <div class="bg-gray-50 rounded-xl p-8 hover-lift border border-gray-200">
+                    <div class="text-4xl mb-4">📨</div>
+                    <h3 class="text-2xl font-bold text-senate-blue mb-4">Ofício</h3>
+                    <p class="text-gray-600 mb-6">Comunicação institucional externa padronizada com identidade visual do Senado Federal.</p>
+                    <button onclick="downloadTemplate('oficio')" class="w-full bg-senate-blue text-white py-3 rounded-lg hover:bg-senate-dark-blue transition-colors">
+                        Baixar Modelo (.dotx)
+                    </button>
+                </div>
+
+                <!-- Despacho -->
+                <div class="bg-gray-50 rounded-xl p-8 hover-lift border border-gray-200">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h3 class="text-2xl font-bold text-senate-blue mb-4">Despacho</h3>
+                    <p class="text-gray-600 mb-6">Decisão administrativa em formato estruturado com campos automatizados para agilidade.</p>
+                    <button onclick="downloadTemplate('despacho')" class="w-full bg-senate-blue text-white py-3 rounded-lg hover:bg-senate-dark-blue transition-colors">
+                        Baixar Modelo (.dotx)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Download All Button -->
+            <div class="text-center mt-12">
+                <button onclick="downloadAll()" class="bg-senate-dark-blue text-white px-12 py-4 rounded-lg font-semibold hover:bg-blue-900 transition-colors flex items-center justify-center space-x-3 mx-auto text-lg">
+                    <span>📥</span>
+                    <span>Download de Todos os Arquivos</span>
+                    <span class="text-sm bg-white/20 px-2 py-1 rounded">.zip</span>
+                </button>
+                <p class="text-gray-600 mt-3 text-sm">Baixe todos os modelos em um único arquivo compactado</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-senate-blue mb-4">Visão Geral e Elementos Técnicos</h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-4xl mx-auto">
+                As diretrizes técnicas adotadas para os modelos foram reunidas em documento de apoio. Ele apresenta padrões de formatação, identidade visual e orientações sobre manutenção futura.
+            </p>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-senate-blue mb-4 flex items-center">
+                            <span class="mr-3">🏗️</span>
+                            Estrutura dos Modelos
+                        </h3>
+                        <p class="text-gray-600">Cabeçalho, corpo e rodapé padronizados com identidade institucional consistente.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-senate-blue mb-4 flex items-center">
+                            <span class="mr-3">🎨</span>
+                            Estilos e Hierarquia
+                        </h3>
+                        <p class="text-gray-600">Títulos, corpo, notas e citações com formatação visual hierárquica definida.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-senate-blue mb-4 flex items-center">
+                            <span class="mr-3">⚙️</span>
+                            Campos Automatizados
+                        </h3>
+                        <p class="text-gray-600">Preenchimento correto de campos dinâmicos e variáveis do documento.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-senate-blue mb-4 flex items-center">
+                            <span class="mr-3">🔒</span>
+                            Travas de Edição
+                        </h3>
+                        <p class="text-gray-600">Definição clara do que pode e não pode ser alterado nos modelos.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-senate-blue mb-4 flex items-center">
+                            <span class="mr-3">📊</span>
+                            Tabelas e Quadros
+                        </h3>
+                        <p class="text-gray-600">Elementos padronizados para apresentação organizada de informações.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-senate-blue mb-4 flex items-center">
+                            <span class="mr-3">📝</span>
+                            Marcadores Padronizados
+                        </h3>
+                        <p class="text-gray-600">Sistema consistente de listas e marcadores para melhor organização.</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="openTechnicalDoc()" class="bg-senate-blue text-white px-8 py-4 rounded-lg hover:bg-senate-dark-blue transition-colors font-semibold flex items-center justify-center space-x-2 mx-auto">
+                        <span>📄</span>
+                        <span>Consultar Documento Técnico</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section id="tutorials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-senate-blue mb-4">Tutoriais e Vídeo-Aulas</h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                Aprenda a usar os modelos de forma eficiente com nossos tutoriais práticos
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <div class="bg-gray-50 rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-4">🎥</div>
+                    <h3 class="text-xl font-bold text-senate-blue mb-3">Como Acessar os Modelos</h3>
+                    <p class="text-gray-600 mb-4">Passo a passo para localizar e abrir os templates no Microsoft Word.</p>
+                    <button onclick="playTutorial('acesso')" class="text-senate-blue hover:text-senate-dark-blue font-semibold">
+                        ▶️ Assistir Tutorial
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-4">📝</div>
+                    <h3 class="text-xl font-bold text-senate-blue mb-3">Preenchimento de Campos</h3>
+                    <p class="text-gray-600 mb-4">Como preencher corretamente os campos automatizados dos documentos.</p>
+                    <button onclick="playTutorial('campos')" class="text-senate-blue hover:text-senate-dark-blue font-semibold">
+                        ▶️ Assistir Tutorial
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold text-senate-blue mb-3">Uso de Estilos</h3>
+                    <p class="text-gray-600 mb-4">Aplicação correta de estilos e respeito às travas de edição.</p>
+                    <button onclick="playTutorial('estilos')" class="text-senate-blue hover:text-senate-dark-blue font-semibold">
+                        ▶️ Assistir Tutorial
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-4">📖</div>
+                    <h3 class="text-xl font-bold text-senate-blue mb-3">Tutorial Ilustrado</h3>
+                    <p class="text-gray-600 mb-4">Guia completo em formato texto com imagens explicativas.</p>
+                    <button onclick="openTextTutorial()" class="text-senate-blue hover:text-senate-dark-blue font-semibold">
+                        📄 Ler Tutorial
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-4">💾</div>
+                    <h3 class="text-xl font-bold text-senate-blue mb-3">Salvamento Correto</h3>
+                    <p class="text-gray-600 mb-4">Como salvar documentos mantendo a formatação padronizada.</p>
+                    <button onclick="playTutorial('salvamento')" class="text-senate-blue hover:text-senate-dark-blue font-semibold">
+                        ▶️ Assistir Tutorial
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 hover-lift">
+                    <div class="text-3xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold text-senate-blue mb-3">Solução de Problemas</h3>
+                    <p class="text-gray-600 mb-4">Resolução dos problemas mais comuns no uso dos templates.</p>
+                    <button onclick="playTutorial('problemas')" class="text-senate-blue hover:text-senate-dark-blue font-semibold">
+                        ▶️ Assistir Tutorial
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Practices Section -->
+    <section id="practices" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-senate-blue mb-12">Boas Práticas e Dicas</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Things to Avoid -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-2xl font-bold text-red-600 mb-6 flex items-center">
+                        <span class="mr-3">❌</span>
+                        10 Coisas a Evitar
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Frases longas demais</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Jargões técnicos desnecessários</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Uso excessivo de negrito ou caixa alta</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Redundâncias e pleonasmos</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Citações sem fonte</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Títulos genéricos</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Linguagem coloquial</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Alteração de estilos institucionais</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Quebra de padrão tipográfico</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-red-500 mt-1">•</span>
+                            <span class="text-gray-700">Uso de abreviações informais</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Best Practices -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-2xl font-bold text-green-600 mb-6 flex items-center">
+                        <span class="mr-3">✅</span>
+                        10 Boas Práticas
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Frases objetivas e diretas</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Argumentos claros e organizados</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Aplicar os estilos do modelo</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Uniformidade nos termos técnicos</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Revisar antes de enviar</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Usar linguagem institucional padronizada</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Destacar apenas o essencial</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Citar fontes com precisão</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Linguagem inclusiva e impessoal</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-500 mt-1">•</span>
+                            <span class="text-gray-700">Aproveitar notas de rodapé com parcimônia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-senate-blue mb-12">Perguntas Frequentes</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(1)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-senate-blue">Preciso instalar algo para usar os modelos?</span>
+                        <span class="text-senate-blue" id="faq-icon-1">+</span>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Não, os modelos funcionam diretamente no Microsoft Word. Basta baixar o arquivo .dotx e abrir no Word para começar a usar.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(2)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-senate-blue">Posso alterar estilos do modelo?</span>
+                        <span class="text-senate-blue" id="faq-icon-2">+</span>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Os estilos institucionais não devem ser alterados para manter a identidade visual. Você pode apenas preencher o conteúdo nos campos designados.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(3)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-senate-blue">Funciona no Word Online?</span>
+                        <span class="text-senate-blue" id="faq-icon-3">+</span>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Sim, os modelos são compatíveis com o Word Online, mas recomendamos usar a versão desktop para melhor experiência.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(4)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-senate-blue">Como salvar em .docx?</span>
+                        <span class="text-senate-blue" id="faq-icon-4">+</span>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Após preencher o documento, use "Salvar Como" e escolha o formato .docx. O modelo original .dotx permanecerá intacto.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(5)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-senate-blue">Quem revisa a minuta antes da assinatura?</span>
+                        <span class="text-senate-blue" id="faq-icon-5">+</span>
+                    </button>
+                    <div id="faq-content-5" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">A revisão segue o fluxo normal da ADVOSF. Os modelos padronizam apenas a formatação, não substituem a revisão de conteúdo.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(6)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors">
+                        <span class="font-semibold text-senate-blue">Posso sugerir melhorias?</span>
+                        <span class="text-senate-blue" id="faq-icon-6">+</span>
+                    </button>
+                    <div id="faq-content-6" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Sim! Use o formulário de feedback na seção de sugestões. Sua contribuição é importante para o aprimoramento contínuo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="py-20 bg-senate-blue text-white">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl font-bold mb-6">Feedback e Sugestões</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Participe da melhoria contínua! Envie sugestões e ajude a aprimorar os modelos.
+            </p>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto mb-8">
+                <div class="text-3xl mb-4">📊</div>
+                <p class="text-lg mb-4">Já implementamos <strong>17 sugestões</strong> da equipe.</p>
+                <p class="text-blue-200">Sua contribuição importa!</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openFeedbackForm()" class="bg-white text-senate-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    📝 Enviar Feedback
+                </button>
+                <button onclick="showQRCode()" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-senate-blue transition-colors">
+                    📱 QR Code - Formulário
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-senate-dark-blue text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-senate-blue font-bold">⚖️</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">ADVOSF</h3>
+                            <p class="text-blue-200 text-sm">Advocacia do Senado Federal</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-200">Padronização a serviço da excelência jurídica.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#templates" class="hover:text-white transition-colors">Modelos</a></li>
+                        <li><a href="#tutorials" class="hover:text-white transition-colors">Tutoriais</a></li>
+                        <li><a href="#practices" class="hover:text-white transition-colors">Boas Práticas</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Downloads</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#" onclick="downloadTemplate('parecer')" class="hover:text-white transition-colors">Parecer (.dotx)</a></li>
+                        <li><a href="#" onclick="downloadTemplate('informacao')" class="hover:text-white transition-colors">Informação (.dotx)</a></li>
+                        <li><a href="#" onclick="downloadTemplate('oficio')" class="hover:text-white transition-colors">Ofício (.dotx)</a></li>
+                        <li><a href="#" onclick="downloadAll()" class="hover:text-white transition-colors">Todos os Modelos (ZIP)</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
+                <p>&copy; 2024 Advocacia do Senado Federal. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // FAQ toggle
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '−';
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = '+';
+            }
+        }
+
+        // Download functions
+        function downloadTemplate(type) {
+            alert(`Baixando modelo: ${type}.dotx\n\nEm um ambiente real, isso iniciaria o download do arquivo.`);
+        }
+
+        function downloadAll() {
+            alert('Baixando pacote completo com todos os modelos (.zip)\n\nEm um ambiente real, isso iniciaria o download do arquivo ZIP.');
+        }
+
+        // Tutorial functions
+        function playTutorial(type) {
+            alert(`Reproduzindo tutorial: ${type}\n\nEm um ambiente real, isso abriria o vídeo tutorial.`);
+        }
+
+        function openTextTutorial() {
+            alert('Abrindo tutorial ilustrado em PDF\n\nEm um ambiente real, isso abriria o documento tutorial.');
+        }
+
+        function openTechnicalDoc() {
+            alert('Abrindo documento técnico\n\nEm um ambiente real, isso abriria o documento com as diretrizes técnicas.');
+        }
+
+        // Feedback functions
+        function openFeedbackForm() {
+            alert('Abrindo formulário de feedback\n\nEm um ambiente real, isso abriria um formulário para envio de sugestões.');
+        }
+
+        function showQRCode() {
+            alert('Exibindo QR Code\n\nEm um ambiente real, isso mostraria um QR Code para acesso ao formulário via dispositivo móvel.');
+        }
+
+        // Scroll animations and parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxVideo = document.querySelector('.parallax-video');
+            
+            // Parallax effect - subtle movement
+            if (parallaxVideo) {
+                const speed = 0.3; // Adjust for more/less parallax effect
+                parallaxVideo.style.transform = `translateY(${scrolled * speed}px) translateZ(0)`;
+            }
+            
+            // Fade in animations
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97872fd003f2f1c3',t:'MTc1Njc1NTA3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
