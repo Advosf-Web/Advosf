@@ -153,16 +153,26 @@ function downloadAll() {
                 Acesse nossos modelos padronizados para diferentes tipos de documentos jurídicos
             </p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <!-- Parecer -->
-                <div class="bg-gray-50 rounded-xl p-8 hover-lift border border-gray-200">
-                    <div class="text-4xl mb-4">📘</div>
-                    <h3 class="text-2xl font-bold text-senate-blue mb-4">Parecer</h3>
-                    <p class="text-gray-600 mb-6">Peça voltada à fundamentação técnica e jurídica com estrutura padronizada para análises complexas.</p>
-                    <button onclick="downloadTemplate('parecer')" class="w-full bg-senate-blue text-white py-3 rounded-lg hover:bg-senate-dark-blue transition-colors">
-                        Baixar Modelo (.dotx)
-                    </button>
-                </div>
+<script>
+function downloadTemplate(tipo) {
+  if (tipo === 'parecer') {
+    window.location.href = "https://drive.google.com/uc?export=download&id=1Yx-ot4yHjjWEoUZcnllU8VJ0rxHGHnDq";
+  }
+}
+</script>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+    <!-- Parecer -->
+    <div class="bg-gray-50 rounded-xl p-8 hover-lift border border-gray-200">
+        <div class="text-4xl mb-4">📘</div>
+        <h3 class="text-2xl font-bold text-senate-blue mb-4">Parecer</h3>
+        <p class="text-gray-600 mb-6">Peça voltada à fundamentação técnica e jurídica com estrutura padronizada para análises complexas.</p>
+        <button onclick="downloadTemplate('parecer')" 
+                class="w-full bg-senate-blue text-white py-3 rounded-lg hover:bg-senate-dark-blue transition-colors">
+            Baixar Modelo (.dotx)
+        </button>
+    </div>
+</div>
 
                 <!-- Informação -->
                 <div class="bg-gray-50 rounded-xl p-8 hover-lift border border-gray-200">
@@ -673,4 +683,5 @@ function downloadAll() {
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97872fd003f2f1c3',t:'MTc1Njc1NTA3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
